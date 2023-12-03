@@ -15,7 +15,7 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    'no-console': ['warn', { allow: ['warn', 'error'] }],
+    'no-console': ['error', { allow: ['warn', 'error'] }],
     '@typescript-eslint/naming-convention': [
       'error',
       {

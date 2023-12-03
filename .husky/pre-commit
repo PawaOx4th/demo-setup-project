@@ -1,6 +1,19 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-pnpm format
+echo "🧼 Start !!!!!"
 
-pnpm check-format
+
+# Format code.
+echo "🛀 Formating code ... "
+yarn format
+
+# Check Prettier standards  
+yarn check-format ||
+
+(
+    echo '🤢🤮🤢🤮 Its FOKING RAW - Your styling looks disgusting. 🤢🤮🤢🤮
+            Prettier Check Failed. Run [yarn format], add changes and try commit again.';
+    false;
+)
+

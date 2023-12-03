@@ -9,6 +9,7 @@ echo "🛀 Formating code ... "
 yarn format
 
 # Check Prettier standards  
+echo "🧹Checking"
 yarn check-format ||
 
 (
